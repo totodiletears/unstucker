@@ -120,7 +120,9 @@ function App() {
           {currentAccount ? tokenIdInput() : null}
         </div>
       <br />
-      <h4>Connected with: 0x...{currentAccount.slice(currentAccount.length - 4, currentAccount.length)}</h4>
+      <div>
+        {/* {currentAccount ? <h4>Connected with: 0x...{currentAccount.slice(currentAccount.length - 4, currentAccount.length)}</h4> : null} */}
+      </div>
       <br />
       <div>
         {currentAccount ? unstuckNftButton() : connectWalletButton()}
