@@ -107,6 +107,10 @@ function App() {
     )
   }
 
+  const returnUserAddress = () => {
+    return <h4>Connected with: 0x...{currentAccount.slice(currentAccount.length - 4, currentAccount.length)}</h4>
+  }
+
   useEffect(() => {
     checkWalletIsConnected()
   }, [])
@@ -121,7 +125,7 @@ function App() {
         </div>
       <br />
       <div>
-        {/* {currentAccount ? <h4>Connected with: 0x...{currentAccount.slice(currentAccount.length - 4, currentAccount.length)}</h4> : null} */}
+        {currentAccount ? returnUserAddress() : null}
       </div>
       <br />
       <div>
